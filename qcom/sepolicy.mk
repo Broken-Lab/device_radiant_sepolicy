@@ -10,21 +10,21 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/nezuko/sepolicy/qcom/private
+    device/radiant/sepolicy/qcom/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/nezuko/sepolicy/qcom/dynamic \
-    device/nezuko/sepolicy/qcom/system
+    device/radiant/sepolicy/qcom/dynamic \
+    device/radiant/sepolicy/qcom/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/nezuko/sepolicy/qcom/dynamic \
-    device/nezuko/sepolicy/qcom/vendor
+    device/radiant/sepolicy/qcom/dynamic \
+    device/radiant/sepolicy/qcom/vendor
 endif
 
 ifneq ($(filter msm8960 msm8226 msm8610 msm8974 apq8084 msm8909 msm8916 msm8952 msm8992 msm8994,$(TARGET_BOARD_PLATFORM)),)
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/nezuko/sepolicy/qcom/legacy-vendor
+    device/radiant/sepolicy/qcom/legacy-vendor
 endif
 
 ifeq (,$(filter msm8960 msm8226 msm8610 msm8974 apq8084 msm8909 msm8916 msm8952 msm8992 msm8994 msm8937 msm8953 msm8996 msm8998 sdm660 sdm710 sdm845, $(TARGET_BOARD_PLATFORM)))

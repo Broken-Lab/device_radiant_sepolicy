@@ -16,19 +16,19 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/nezuko/sepolicy/common/public
+    device/radiant/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/nezuko/sepolicy/common/private
+    device/radiant/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/nezuko/sepolicy/common/dynamic
+    device/radiant/sepolicy/common/dynamic
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/nezuko/sepolicy/common/dynamic \
-    device/nezuko/sepolicy/common/vendor
+    device/radiant/sepolicy/common/dynamic \
+    device/radiant/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/nezuko/sepolicy/legacy-common/sepolicy.mk
+-include device/radiant/sepolicy/legacy-common/sepolicy.mk
